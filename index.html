@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kalli Labs</title>
+  <meta name="description" content="Kalli Labs crea apps y juegos hechos en México: simples, útiles y respetuosos con tus datos.">
+  <meta property="og:title" content="Kalli Labs">
+  <meta property="og:description" content="Apps y juegos hechos en México.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kallilabs.com/">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <style>
+    /* Layout: one centered column; brand mark + statement on top, app catalog as a list of rows, contact at the foot */
+    :root {
+      --bg: #f7f5f0;
+      --surface: #ffffff;
+      --ink: #1f2a44;
+      --muted: #5c6478;
+      --line: #e3dfd5;
+      --accent: #b9791a;
+      --mark: #f2b84b;
+      --font: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      --mono: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+      color-scheme: light;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #121826;
+        --surface: #1a2234;
+        --ink: #eef1f7;
+        --muted: #a3abbd;
+        --line: #2b3550;
+        --accent: #f2b84b;
+        --mark: #f2b84b;
+        color-scheme: dark;
+      }
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--ink); font: 17px/1.6 var(--font); }
+    main { max-width: 44rem; margin: 0 auto; padding-block: 56px 40px; padding-inline: 20px; display: flex; flex-direction: column; gap: 48px; }
+    header { display: flex; flex-direction: column; gap: 18px; }
+    .brand { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 1.15rem; letter-spacing: .01em; }
+    .brand svg { width: 40px; height: 40px; flex: none; }
+    h1 { margin: 0; font-size: clamp(2rem, 6vw, 2.9rem); line-height: 1.1; letter-spacing: -.02em; text-wrap: balance; }
+    .lead { margin: 0; max-width: 34rem; color: var(--muted); font-size: 1.1rem; }
+    .nahuatl { font-family: var(--mono); font-size: .85rem; color: var(--accent); letter-spacing: .02em; }
+    section h2 { margin: 0 0 14px; font-size: .8rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+    .apps { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+    .app { display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 16px; align-items: center; padding-block: 18px; border-bottom: 1px solid var(--line); }
+    .app img { width: 64px; height: 64px; border-radius: 16px; }
+    .app h3 { margin: 0; font-size: 1.15rem; }
+    .app p { margin: 2px 0 8px; color: var(--muted); }
+    .links { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .95rem; }
+    a { color: var(--accent); text-underline-offset: 3px; }
+    a:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+    .soon { color: var(--muted); font-size: .95rem; }
+    footer { border-top: 1px solid var(--line); padding-top: 18px; color: var(--muted); font-size: .9rem; display: flex; flex-wrap: wrap; gap: 6px 20px; justify-content: space-between; }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div class="brand">
+        <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#1f2a44"/><path d="M14 30 32 15l18 15v19a3 3 0 0 1-3 3H17a3 3 0 0 1-3-3Z" fill="none" stroke="#f2b84b" stroke-width="5" stroke-linejoin="round"/><rect x="27" y="36" width="10" height="16" rx="2" fill="#f2b84b"/></svg>
+        Kalli Labs
+      </div>
+      <h1>Apps y juegos hechos en México.</h1>
+      <p class="lead">Herramientas simples, útiles y respetuosas con tus datos. Cada app hace una cosa y la hace bien.</p>
+      <div class="nahuatl">kalli (náhuatl): casa</div>
+    </header>
+
+    <section aria-labelledby="apps-title">
+      <h2 id="apps-title">Nuestras apps</h2>
+      <ul class="apps">
+        <li class="app">
+          <img src="/apilalo/favicon.png" alt="" width="64" height="64">
+          <div>
+            <h3>Apílalo</h3>
+            <p>Un toque, un bloque. Apila lo más alto que puedas y reta a tus amigos.</p>
+            <div class="links">
+              <a href="/apilalo/">Jugar en el navegador</a>
+              <a href="/apilalo/privacy.html">Aviso de privacidad</a>
+              <span class="soon">Pronto en Google Play</span>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <footer>
+      <span>© 2026 Kalli Labs</span>
+      <span>Contacto: <a href="mailto:apps@kallilabs.com">apps@kallilabs.com</a></span>
+    </footer>
+  </main>
+</body>
+</html>
